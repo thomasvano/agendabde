@@ -1,0 +1,12 @@
+{
+    "port": 3000,
+    "siteUrl": "http://localhost:3000",
+    "fromName": "Rallly",
+    "fromEmail": "noreply@rallly.co",
+    "db": "mongodb://localhost:27017/rallly",
+    "smtpHost": "",
+    "smtpPort": 587,
+    "smtpUser": "",
+    "smtpPwd": "",
+    "smtpSecure": false
+}

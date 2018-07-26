@@ -1,0 +1,43 @@
+<div ng-show="event._id">
+    <div class="box ">
+        <div class="event-header">
+            <div class="details">
+                <div class="title">
+                    {{event.title}}
+                    <span class="title-label danger" ng-show="event.isClosed">Poll Closed</span>
+                    <span class="title-label success" ng-hide="event.isClosed">Poll Open</span>
+                </div>
+                <div class="subtitle">
+                    Created by <a href="mailto:{{event.creator.email}}">{{event.creator.name}}</a>
+                    &bull; {{event.created | elapsed}}
+                    &bull; <a href="#" ng-click="editEvent()">Edit Details</a>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="btn" ng-click="editEvent()">Edit Event</button>
+            </div>
+        </div>
+        <div class="event-description" ng-if="event.description" ng-bind-html="event.description | linky"></div>
+        <div class="event-location" ng-if="event.location">
+            Location:
+            <a  href="http://maps.google.com?q={{event.location}}"  target="_blank">{{event.location}}</a>
+        </div>
+
+        <div class="poll-wrapper">
+            <div poll event="event" class="poll">
+            </div>
+        </div>
+    </div>
+
+    <div class="box" ng-hide="event.comments.length == 0 && event.isClosed">
+        <div class="box-title">
+            Discussion
+        </div>
+        <div class="box-description">
+            You can discuss the event with your friends by leaving a comment below.
+        </div>
+        <div discussion event="event">
+
+        </div>
+    </div>
+</div>
