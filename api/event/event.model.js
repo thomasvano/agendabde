@@ -65,7 +65,7 @@ var EventSchema = new Schema({
         verificationCode : String,
         unsubscribeCode : String
     }
-});
+}, { usePushEach: true });
 
 var model = mongoose.model('Event', EventSchema);
 

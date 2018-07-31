@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 if (process.env.NODE_ENV === 'maintenance') {
     app.get('*', function(req, res) {
-        res.send('Rallly is down for maintenance. Please check back in a few minutes');
+        res.send('AgendaBDE is down for maintenance. Please check back in a few minutes');
     })
 } else {
     require('./config/routes')(app);

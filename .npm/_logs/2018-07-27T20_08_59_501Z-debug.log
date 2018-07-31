@@ -1,0 +1,20 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@5.6.0
+3 info using node@v8.9.4
+4 verbose config Skipping project config: /home/node/.npmrc. (matches userconfig)
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info lifecycle rallly@1.0.0~prestart: rallly@1.0.0
+7 verbose lifecycle rallly@1.0.0~prestart: unsafe-perm in lifecycle true
+8 verbose lifecycle rallly@1.0.0~prestart: PATH: /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/node/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+9 verbose lifecycle rallly@1.0.0~prestart: CWD: /home/node
+10 silly lifecycle rallly@1.0.0~prestart: Args: [ '-c', 'npm run config' ]
+11 silly lifecycle rallly@1.0.0~prestart: Returned: code: 0  signal: null
+12 info lifecycle rallly@1.0.0~start: rallly@1.0.0
+13 verbose lifecycle rallly@1.0.0~start: unsafe-perm in lifecycle true
+14 verbose lifecycle rallly@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/node/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+15 verbose lifecycle rallly@1.0.0~start: CWD: /home/node
+16 silly lifecycle rallly@1.0.0~start: Args: [ '-c', 'DEBUG=rallly nodemon ./bin/www' ]
+17 error cb() never called!
+18 error This is an error with npm itself. Please report this error at:
+19 error <https://github.com/npm/npm/issues>

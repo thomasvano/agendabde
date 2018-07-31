@@ -4,22 +4,22 @@
             <div class="details">
                 <div class="title">
                     {{event.title}}
-                    <span class="title-label danger" ng-show="event.isClosed">Poll Closed</span>
-                    <span class="title-label success" ng-hide="event.isClosed">Poll Open</span>
+                    <span class="title-label danger" ng-show="event.isClosed">Sondage Fermé</span>
+                    <span class="title-label success" ng-hide="event.isClosed">Sondage Ouvert</span>
                 </div>
                 <div class="subtitle">
-                    Created by <a href="mailto:{{event.creator.email}}">{{event.creator.name}}</a>
+                    Créé par <a href="mailto:{{event.creator.email}}">{{event.creator.name}}</a>
                     &bull; {{event.created | elapsed}}
-                    &bull; <a href="#" ng-click="editEvent()">Edit Details</a>
+                    &bull; <a href="#" ng-click="editEvent()">Modifier les détails</a>
                 </div>
             </div>
             <div class="actions">
-                <button class="btn" ng-click="editEvent()">Edit Event</button>
+                <button class="btn" ng-click="editEvent()">Modifier l'Event</button>
             </div>
         </div>
         <div class="event-description" ng-if="event.description" ng-bind-html="event.description | linky"></div>
         <div class="event-location" ng-if="event.location">
-            Location:
+            Lieu:
             <a  href="http://maps.google.com?q={{event.location}}"  target="_blank">{{event.location}}</a>
         </div>
 
@@ -34,7 +34,7 @@
             Discussion
         </div>
         <div class="box-description">
-            You can discuss the event with your friends by leaving a comment below.
+            Vous pouvez discuter de l'événement avec vos amis en laissant un commentaire ci-dessous.
         </div>
         <div discussion event="event">
 

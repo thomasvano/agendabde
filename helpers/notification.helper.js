@@ -89,13 +89,13 @@ communicator.on('comment:add', function (event, comment) {
 var sendEmailConfirmation = function (event) {
     sendEmail({
         to: event.creator.email,
-        subject: 'Rallly: ' + event.title + ' - Verify Email Address',
-        title: 'Your event ' + event.title + ' has been created successfully.',
-        buttonText: 'Verify Email Address',
+        subject: 'AgendaBDE: ' + event.title + ' - Vérification de l\'adresse e-mail',
+        title: 'Votre event ' + event.title + ' a été créé avec succès.',
+        buttonText: 'Vérification de l\'adresse e-mail',
         buttonURL: app.get('absoluteUrl')('verify/' + event._id + '/code/' + event.__private.verificationCode),
         message: `Hi ${event.creator.name},<br /><br />` +
-            'An email has been sent to each participant with a link to the event.<br /><br />' +
-            'Important: To continue receiving email notifications about this event, please click the button below to verify your email address.'
+            'Un email a été envoyé à chaque participant avec un lien vers l\'événement.<br /><br />' +
+            'Important: Pour continuer à recevoir des notifications par e-mail concernant cet event, veuillez cliquer sur le bouton ci-dessous pour valider votre adresse e-mail.'
     });
 }
 
@@ -104,13 +104,13 @@ var sendInvites = function (event) {
     event.emails.forEach(function (item) {
         sendEmail({
             to: item.email,
-            subject: 'Rallly: ' + event.title,
-            title: event.creator.name + ' has invited you to participate in their event: ' + event.title,
+            subject: 'AgendaBDE: ' + event.title,
+            title: event.creator.name + ' vous a invité à participer à leur event: ' + event.title,
             replyto: event.creator.email,
-            buttonText: 'View Event',
+            buttonText: 'Voir l\'Event',
             buttonURL: app.get('absoluteUrl')(event._id),
-            message: 'Rallly is a free collaborative scheduling service that lets you and your friends vote on a date to host an event. ' +
-                'Click on the button below to visit the event page and vote on the dates that best suit you.'
+            message: 'AgendaBDE est un outil de planification collaborative gratuit qui vous permet, ainsi qu\'à votre team, de voter sur une date pour organiser un événement. ' +
+                'Clique sur le bouton ci-dessous pour visiter la page de l\'event et voter sur les dates qui vous conviennent le mieux.'
         });
     });
 }
@@ -119,35 +119,34 @@ var sendInvites = function (event) {
 var verifyEmail = function (event) {
     sendEmail({
         to: event.creator.email,
-        subject: 'Rallly: ' + event.title + ' - Verify Email Address',
-        title: 'Please verify your email address to receive updates from this event.',
-        buttonText: 'Verify Email Address',
+        subject: 'AgendaBDE: ' + event.title + ' - Vérification de l\’adresse e-mail',
+        title: 'Veuillez vérifier votre adresse email pour recevoir les mises à jour de cet événement.',
+        buttonText: 'Vérifier l\'adresse e-mail',
         buttonURL: app.get('absoluteUrl')('verify/' + event._id + '/code/' + event.__private.verificationCode),
-        message: `Hi ${event.creator.name},<br /><br />` +
-            `If you would like to receive email updates from this event, please click on the button below to verify your email address.`
+        message: `Bonjour ${event.creator.name},<br /><br />` +
+            'Si vous souhaitez recevoir des mises à jour par email de cet event, cliquer sur le bouton ci-dessous pour confirmer votre adresse email.'
     });
 }
 
 var sendNewParticipantNotification = function (event, participant) {
     sendEmail({
         to: event.creator.email,
-        subject: 'Rallly: ' + event.title + ' - New Participant',
-        title: participant.name + ' has voted!',
-        buttonText: 'View Event',
+        subject: 'AgendaBDE: ' + event.title + ' - Nouveau Participant',
+        title: participant.name + ' a voté!',
+        buttonText: 'Voir l\'Event',
         buttonURL: app.get('absoluteUrl')(event._id),
-        message: `Hi ${event.creator.name},<br /><br />` +
-            'Click the button below to see the updates made to your event page!'
+        message: `Bonjour ${event.creator.name},<br /><br />` +
+            'Clique sur le bouton ci-dessous pour voir les mises à jour apportées à la page de votre event!'
     });
 }
-
 var sendNewCommentNotification = function (event, comment) {
     sendEmail({
         to: event.creator.email,
-        subject: 'Rallly: ' + event.title + ' - New Comment',
+        subject: 'AgendaBDE: ' + event.title + ' - Nouveau Commentaire',
         title: comment.author.name + ' has commented on your event!',
-        buttonText: 'View Event',
+        buttonText: 'Voir l\'Event',
         buttonURL: app.get('absoluteUrl')(event._id),
         message: `Hi ${event.creator.name},<br /><br />` +
-            'Click the button below to see the updates made to your event page!'
+            'Clique sur le bouton ci-dessous pour voir les mises à jour apportées à la page de votre event!'
     });
 }

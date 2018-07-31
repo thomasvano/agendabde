@@ -151,6 +151,7 @@ exports.createParticipant = function(req, res, next){
                 next();
         });
     });
+
 }
 
 exports.updateParticipant = function(req, res, next){

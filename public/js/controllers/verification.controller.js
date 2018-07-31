@@ -3,7 +3,7 @@ angular.module('rallly')
     Event.verify({id : $state.params.id, code :$state.params.code}, function(){
         var notification = new Notification({
             title : 'Email Verified',
-            message : 'Your email has been verified. You will now be able to receive email notifications for this event',
+            message : 'Votre mail a été vérifié. Vous pourrez désormais recevoir des notifications par e-mail pour cet événement',
             type : 'success',
             timeout : 5000
         });

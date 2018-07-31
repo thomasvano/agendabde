@@ -19,14 +19,14 @@
     </div>
     <div class="input-section form-group">
         <div class="content-section">
-            <textarea class="form-control" required ng-model="comment.content" placeholder="Write a comment..."></textarea>
+            <textarea class="form-control" required ng-model="comment.content" placeholder="Écrire un commentaire..."></textarea>
         </div>
         <div class="name-section">
             <div class="name-container">
-                <input type="text" class="form-control" required placeholder="Your Name" ng-model="comment.author.name" />
-                <button type="submit" class="btn">Post Comment</button>
+                <input type="text" class="form-control" required placeholder="Votre Nom" ng-model="comment.author.name" />
+                <button type="submit" class="btn">Envoyer</button>
                 <span class="form-error" ng-show="commentForm.$submitted && commentForm.$error">
-                    <img src="/images/error.png" width="14" /> Make sure you fill in all the fields.
+                    <img src="/images/error.png" width="14" /> Assurez-vous de remplir tous les champs.
                 </span>
             </div>
         </div>

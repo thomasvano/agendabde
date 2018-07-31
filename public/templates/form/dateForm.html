@@ -1,5 +1,5 @@
 <div class="section-details">
-    <div class="section-title">Choose Dates</div>
+    <div class="section-title">Choisissez des dates</div>
     <ul class="daticon-list">
         <li ng-repeat="d in event.dates">
             <div class="daticon">
@@ -20,9 +20,9 @@
 <div class="section-main">
     <div class="form-row">
         <div class="form-group">
-            <label for="email">Calendar</label>
+            <label for="email">Calendrier</label>
             <span class="form-error" ng-show="form.$submitted && form.datepicker.$error.required">
-                <img src="/images/error.png" width="14" /> You need to select a few dates
+                <img src="/images/error.png" width="14" /> Vous devez sélectionner des dates
             </span>
             <div datepicker required name="datepicker" control="datepicker" ng-model="event.dates">
 

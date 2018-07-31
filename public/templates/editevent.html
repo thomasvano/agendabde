@@ -1,9 +1,9 @@
 <div ng-show="event._id">
     <div class="box">
 
-        <div class="box-title">Edit Event</div>
+        <div class="box-title">Modifier l'Event</div>
         <div class="box-description">
-            You can makes changes to your existing event by changing the fields in the form below.
+            Vous pouvez apporter des modifications à votre événement en changeant les champs dans le formulaire ci-dessous.
         </div>
 
         <form novalidate name="form" ng-submit="submit()">
@@ -25,10 +25,10 @@
 
             <div class="box-controls box-bottom-sticky">
                 <button type="submit" ng-show="didChange()" class="btn btn-primary" ng-class="{disabled : !didChange()}">
-                    Save Changes
+                    Sauvegarder
                 </button>
-                <button type="button" ng-click="undoChanges()" class="btn" ng-show="didChange()">Undo Changes</button>
-                <a href="/{{event._id}}" class="btn" ng-hide="didChange()">Done</a>
+                <button type="button" ng-click="undoChanges()" class="btn" ng-show="didChange()">Annuler</button>
+                <a href="/{{event._id}}" class="btn" ng-hide="didChange()">Terminer</a>
             </div>
 
         </form>

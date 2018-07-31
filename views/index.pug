@@ -19,63 +19,54 @@ block content
                     img(src='/images/logo.png', alt='Agenda BDE')
                 nav.main-nav
                     ul.links
-                        li: a.active(href='#', scroll-to='intro') Home
-                        li: a(href='#', scroll-to='features') Features
-                        li: a(href='#', scroll-to='about') About
+                        li: a.active(href='#', scroll-to='intro') Accueil
+                        li: a(href='#', scroll-to='features') Fonctionnalités
+                        li: a(href='#', scroll-to='about') A Propos
             .intro-headline
                 h1 Agenda BDE
-                h2 lets you and your team vote on a date to host an event
+                h2 Trouver la meilleure date pour un event avec l'équipe
             .intro-actions
                 a#schedule-event.button.primary(href='/new') Créer un Event
                     span.free-label
-                a#view-demo.button(href='/example') Voir la liste des Events
+                //-a#view-demo.button(href='/example') Voir la liste des Events
             .intro-shots
                 .desktop
                 .mobile
         section#features.landing-section: .container
-                h3 Features
-                h4 Agenda BDE makes collaborating with team quick and easy
+                h3 Fonctionnalités
+                h4 Agenda BDE rend la collaboration avec l'équipe rapide et facile
                 .features
                     .feature
                         .image: img(src='/images/landing/share.png', width='48')
                         h5 Share
-                        p Create a page for your upcoming event and share it with your team.
+                        p Créez une page pour votre prochain événement et partagez-la avec votre équipe.
                     .feature
                         .image: img(src='/images/landing/discuss.png', width='48')
                         h5 Discuss
-                        p Discuss details of the event with your team right on the event page.
+                        p Discutez des détails de l'événement avec votre équipe directement sur la page de l'événement.
                     .feature
                         .image: img(src='/images/landing/vote.png', width='48')
                         h5 Vote
-                        p Let everyone know which dates best work for you and find a common date to host your event.
+                        p Dire quelles dates fonctionnent le mieux pour vous et trouvez une date commune pour votre événement.
                 .seperator#about
-                h3 About
-                h4 Frequently Asked Questions
+                h3 A Propos
+                h4 Questions Fréquentes
                 .questions-section
                     .questions-col
                         .question
-                            h6 Who made this?
-                            p Rallly was created by 
-                                a(href='') Your mom
-                                | .
+                            h6 C'est gratuit ?
+                            p Oui, Agenda BDE est complètement gratuit.
                         .question
-                            h6 Is it free?
-                            p Yes, Agenda BDE is completely free to use.
-                        .question
-                            h6 Why did you create Agenda BDE?
+                            h6 Est-ce que je peux proposer des nouvelles fonctionnalités?
                             p
-                                | For you.
+                                | NON
+                                | .
                     .questions-col
                         .question
-                            h6 This is great, is there anything I can do to help out?
+                            h6 Pourquoi avoir créé Agenda BDE?
                             p
-                                | Yes, Use it
-                                | !
-                        .question
-                            h6 Where can I submit a feature request?
-                            p
-                                | NOWHERE !
-                                | .
+                                | Pour Clara.
+
         section#share.landing-section.bottom: .container
             .seperator
 
