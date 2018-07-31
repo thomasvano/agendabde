@@ -11,7 +11,7 @@ Rallly is a free collaborative scheduling service that helps you and your friend
 To get started quickly and easily, simply run the following:
 
 ```bash
-git clone git@github.com:lukevella/Rallly.git
+git clone git@github.com:thomasvano/agendabde.git
 cd Rallly
 ```
 Copy the sample `.env` file then open it and set the variables.
