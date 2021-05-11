@@ -21,7 +21,7 @@
     "mongoose": "^5.7.5",
     "morgan": "^1.5.1",
     "nodejs": "0.0.0",
-    "nodemailer": "^4.0.1",
+    "nodemailer": ">=6.4.16"
     "nodemailer-express-handlebars": "^2.0.0",
     "nodemon": "^1.18.3",
     "numeral": "^1.5.3",
@@ -52,6 +52,7 @@
     "minimist": ">=0.2.1",
     "set-value": ">=2.0.1",
     "lodash": ">=4.17.21",
-    "lodash.template": ">=4.5.0"
+    "lodash.template": ">=4.5.0",
+    "handlebars": ">=4.7.7",
   }
 }
